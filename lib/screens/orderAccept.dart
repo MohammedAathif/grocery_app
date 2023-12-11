@@ -18,6 +18,7 @@ class _OrderAcceptedState extends State<OrderAccepted> {
   Widget build(BuildContext context) {
     
     var width = MediaQuery.of(context).size.width/2;
+    var width2 = MediaQuery.of(context).size.width/2;
     var heigth = MediaQuery.of(context).size.height/2;
     return Scaffold(
       body: Column(children: [
