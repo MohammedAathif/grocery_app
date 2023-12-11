@@ -14,6 +14,7 @@ class _LocationPageState extends State<LocationPage> {
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height/2;
     //var width = MediaQuery.of(context).size.width/2;
+    //var width = MediaQuery.of(context).size.width/2;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
