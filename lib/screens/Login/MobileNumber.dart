@@ -186,12 +186,14 @@ class LoginScreen extends StatelessWidget {
   final _phoneController = TextEditingController();
   final _codeController = TextEditingController();
 
+  LoginScreen({Key? key}) : super(key: key);
+
   Future<void> loginUser(String phone, BuildContext context) async {
     FirebaseAuth _auth = FirebaseAuth.instance;
 
     _auth.verifyPhoneNumber(
       phoneNumber: phone,
-      timeout: Duration(seconds: 60),
+      timeout: const Duration(seconds: 60),
 
       verificationCompleted: (PhoneAuthCredential credential) async {
         Navigator.of(context).pop();
@@ -218,7 +220,7 @@ class LoginScreen extends StatelessWidget {
             barrierDismissible: false,
             builder: (context) {
               return AlertDialog(
-                title: Text("Give the code?"),
+                title: const Text("Give the code?"),
                 content: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
@@ -228,10 +230,11 @@ class LoginScreen extends StatelessWidget {
                   ],
                 ),
                 actions: <Widget>[
-                  FlatButton(
-                    child: Text("Confirm"),
-                    textColor: Colors.white,
-                    color: Colors.blue,
+                  ElevatedButton(
+                    child: const Text("Confirm"),
+                    style: ButtonStyle(backgroundColor: MaterialStateProperty.all( Colors.blue),foregroundColor: MaterialStateProperty.all( Colors.white)),
+                    // textColor: Colors.white,
+                    // color: Colors.blue,
                     onPressed: () async {
                       final code = _codeController.text.trim();
                       PhoneAuthCredential credential =
@@ -258,29 +261,29 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
         body: SingleChildScrollView(
       child: Container(
-        padding: EdgeInsets.all(32),
+        padding: const EdgeInsets.all(32),
         child: Form(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text(
+              const Text(
                 "Login",
                 style: TextStyle(
                     color: Colors.lightBlue,
                     fontSize: 36,
                     fontWeight: FontWeight.w500),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
               TextFormField(
                 decoration: InputDecoration(
-                    enabledBorder: OutlineInputBorder(
+                    enabledBorder: const OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(8)),
                       // borderSide: BorderSide(color: Colors.grey[200])
                     ),
-                    focusedBorder: OutlineInputBorder(
+                    focusedBorder: const OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(8)),
                       //borderSide: BorderSide(color: Colors.grey[300])
                     ),
@@ -289,21 +292,24 @@ class LoginScreen extends StatelessWidget {
                     hintText: "Mobile Number"),
                 controller: _phoneController,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
               Container(
                 width: double.infinity,
-                child: FlatButton(
-                  child: Text("LOGIN"),
-                  textColor: Colors.white,
-                  padding: EdgeInsets.all(16),
+                child: ElevatedButton(
+                  child: const Text("LOGIN"),
+                  style: ButtonStyle(
+                      padding: MaterialStateProperty.all(const EdgeInsets.all(16)),
+                      backgroundColor: MaterialStateProperty.all( Colors.blue),foregroundColor: MaterialStateProperty.all( Colors.white)),
+                 // textColor: Colors.white,
+                  //padding: EdgeInsets.all(16),
                   onPressed: () {
                     final phone = _phoneController.text.trim();
 
                     loginUser(phone, context);
                   },
-                  color: Colors.blue,
+                 // color: Colors.blue,
                 ),
               )
             ],
