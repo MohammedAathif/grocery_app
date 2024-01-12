@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../widgets/widgets.dart';
+import 'package:grocery_app/utils/app_images.dart';
+import 'package:grocery_app/utils/widgets.dart';
 import 'SignIn.dart';
 
 class StartingPage extends StatefulWidget {
@@ -16,7 +17,7 @@ class _StartingPageState extends State<StartingPage> {
     var height = MediaQuery.of(context).size.height / 2;
     return Scaffold(
       body: Stack(children: [
-        Positioned.fill(child: Image.asset('assets/homeBackground.png',fit: BoxFit.fill)),
+        Positioned.fill(child: Image.asset(AppImages.homeBackgroundImage,fit: BoxFit.fill)),
         Padding(
           padding:  EdgeInsets.symmetric(horizontal: width * 0.10,vertical: height * 0.1),
            //EdgeInsets.only(bottom: height * 0.1,left: width * 0.10,right: width * 0.10),
@@ -25,7 +26,7 @@ class _StartingPageState extends State<StartingPage> {
             children: [
             SizedBox(
               height: 50,
-              child: Image.asset('assets/carrot.png')),
+              child: Image.asset(AppImages.carrotImage)),
               const SizedBox(height: 5),
             text(name:'   Welcome\n to our store',
             color: Colors.white,fontSize: 40),

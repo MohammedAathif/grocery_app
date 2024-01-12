@@ -1,9 +1,9 @@
 // ignore_for_file: avoid_print, must_be_immutable
 
 import 'package:flutter/material.dart';
-import 'package:grocery_app/screens/Database/database.dart';
+import 'package:grocery_app/utils/shared_preference.dart';
+import 'package:grocery_app/utils/widgets.dart';
 import '../../Model/model.dart';
-import '../../widgets/widgets.dart';
 
 class Favourite extends StatefulWidget {
   Favourite({Key? key, this.addToFavorite}) : super(key: key);

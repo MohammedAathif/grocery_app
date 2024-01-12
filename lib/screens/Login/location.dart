@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_app/screens/Home/HomePage.dart';
-import '../../widgets/widgets.dart';
+import 'package:grocery_app/utils/app_images.dart';
+import 'package:grocery_app/utils/widgets.dart';
 
 class LocationPage extends StatefulWidget {
   const LocationPage({ Key? key }) : super(key: key);
@@ -31,7 +32,7 @@ class _LocationPageState extends State<LocationPage> {
           SizedBox(
             //alignment: Alignment.center,
             height: height * 0.40,
-            child: Image.asset('assets/location.png')),
+            child: Image.asset(AppImages.locationImage)),
              SizedBox(height: height * 0.10),
           text(name: "Select your Location",fontweight: FontWeight.bold,fontSize: 30),
           const SizedBox(height: 10),

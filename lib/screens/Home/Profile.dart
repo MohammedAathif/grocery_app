@@ -1,9 +1,9 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
-import 'package:grocery_app/main.dart';
-
-import '../../widgets/widgets.dart';
+import 'package:grocery_app/screens/splash_screen.dart';
+import 'package:grocery_app/utils/app_images.dart';
+import 'package:grocery_app/utils/widgets.dart';
 
 class Account extends StatefulWidget {
   const Account({ Key? key }) : super(key: key);
@@ -28,8 +28,8 @@ class _AccountState extends State<Account> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                Image.asset(
-                 
-                 'assets/Profile.png',height: 80,width: 80,fit: BoxFit.cover,
+                 AppImages.profileImage
+                 ,height: 80,width: 80,fit: BoxFit.cover,
                  colorBlendMode: BlendMode.darken,),
                  const SizedBox(width: 20),
               Column(children: const [

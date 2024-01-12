@@ -2,10 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:grocery_app/screens/Home/HomePage.dart';
-import 'package:grocery_app/screens/Database/database.dart';
-//import 'package:shared_preferences/shared_preferences.dart';
+import 'package:grocery_app/utils/shared_preference.dart';
+import 'package:grocery_app/utils/widgets.dart';
 import '../Model/model.dart';
-import '../widgets/widgets.dart';
 
 class AboutProduct extends StatefulWidget {
   AboutProduct(

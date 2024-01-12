@@ -1,10 +1,10 @@
 // ignore_for_file: file_names, must_be_immutable, unrelated_type_equality_checks
 
 import 'package:flutter/material.dart';
-import 'package:grocery_app/screens/Database/database.dart';
+import 'package:grocery_app/utils/shared_preference.dart';
+import 'package:grocery_app/utils/widgets.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../Model/model.dart';
-import '../widgets/widgets.dart';
 import 'AboutProduct.dart';
 
 

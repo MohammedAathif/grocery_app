@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:grocery_app/screens/Home/HomePage.dart';
 import 'package:grocery_app/Model/model.dart';
 import 'package:grocery_app/screens/AboutProduct.dart';
-import 'package:grocery_app/widgets/widgets.dart';
+import 'package:grocery_app/utils/app_images.dart';
+import 'package:grocery_app/utils/widgets.dart';
 
 class ExploreProductDetail extends StatelessWidget {
   const ExploreProductDetail({ Key? key,this.items,this.name }) : super(key: key);
@@ -25,7 +26,7 @@ class ExploreProductDetail extends StatelessWidget {
                   fontweight: FontWeight.bold)),
           actions: [Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Image.asset('assets/Filter.png',width: 20),
+            child: Image.asset(AppImages.filterImage,width: 20),
           )],
         ),
         body: GridView.builder(

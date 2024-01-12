@@ -2,7 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:grocery_app/screens/Home/HomePage.dart';
-import '../../widgets/widgets.dart';
+import 'package:grocery_app/utils/app_images.dart';
+import 'package:grocery_app/utils/widgets.dart';
 
 class Loginpage extends StatefulWidget {
   const Loginpage({ Key? key }) : super(key: key);
@@ -27,7 +28,7 @@ class _LoginpageState extends State<Loginpage> {
           Container(
             alignment: Alignment.center,
             height: 60,
-            child: Image.asset('assets/carrotRed.png')),
+            child: Image.asset(AppImages.carrotRedImage)),
             text(name: signup ? "Loging" : "Sign Up",fontweight: FontWeight.bold,fontSize: 20),
             text(name:signup ? "Enter your email and password" : "Enter your credentials to continue"),
             signup ? const SizedBox() : text(name: "Username") ,

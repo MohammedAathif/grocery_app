@@ -2,6 +2,7 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
+import 'package:grocery_app/utils/app_images.dart';
 
 import 'MobileNumber.dart';
 
@@ -32,7 +33,7 @@ class _SignInState extends State<SignIn> {
               SizedBox(
                 height: height/2,
                 width: width,
-                child: Image.asset('assets/loginBackground.png',fit: BoxFit.fitWidth)),
+                child: Image.asset(AppImages.locationBgImage,fit: BoxFit.fitWidth)),
               const Text('Get your groceries \nwith nectar',
               style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),
               ),
@@ -58,7 +59,7 @@ class _SignInState extends State<SignIn> {
                      SizedBox(
                        height: 10,
                        width: 20,
-                       child: Image.asset('assets/googleLogo.png')),
+                       child: Image.asset(AppImages.googleLogoImage)),
                       const Text('Continue with Google',style: TextStyle(color: Colors.white),),
                     ],
                   )),
@@ -75,7 +76,7 @@ class _SignInState extends State<SignIn> {
                      SizedBox(
                        height: 10,
                        width: 20,
-                       child: Image.asset('assets/facebookLogo.png')),
+                       child: Image.asset(AppImages.fbLogoImage)),
                       const Text('Continue with Facebook',style: TextStyle(color: Colors.white),),
                     ],
                   )),

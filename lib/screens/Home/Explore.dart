@@ -2,8 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:grocery_app/screens/ExploreProductDetail.dart';
-import 'package:grocery_app/screens/Database/datas.dart';
-import '../../widgets/widgets.dart';
+import 'package:grocery_app/utils/app_constants.dart';
+import 'package:grocery_app/utils/app_images.dart';
+import 'package:grocery_app/utils/widgets.dart';
 
 class Explore extends StatefulWidget {
   const Explore({Key? key}) : super(key: key);
@@ -34,13 +35,12 @@ class _ExploreState extends State<Explore> {
   ];
 
   List images = [
-    'assets/fruits.png',
-    'assets/juice.png',
-    'assets/dairy.png',
-    'assets/oil.png',
-    'assets/meat.png',
-    'assets/snacks.png',
-    
+    AppImages.fruitsImage,
+    AppImages.juiceImage,
+    AppImages.dairyImage,
+    AppImages.oilImage,
+    AppImages.meatImage,
+    AppImages.snacksImage,
   ];
 
   @override

@@ -3,8 +3,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:grocery_app/screens/Details.dart';
-import '../../widgets/widgets.dart';
-import '../Database/datas.dart';
+import 'package:grocery_app/utils/app_constants.dart';
+import 'package:grocery_app/utils/app_images.dart';
+import 'package:grocery_app/utils/widgets.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -15,9 +16,9 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   List<Image> carousel = [
-    Image.asset('assets/vegetable (1).png'),
-    Image.asset('assets/vegetable (2).png'),
-    Image.asset('assets/vegetable (3).png'),
+    Image.asset(AppImages.vegetableImage1),
+    Image.asset(AppImages.vegetableImage2),
+    Image.asset(AppImages.vegetableImage3),
   ];
 
   int currentIndexPage = 0;
@@ -30,7 +31,7 @@ class _HomeState extends State<Home> {
         body: Padding(
       padding: const EdgeInsets.symmetric(vertical: 20.0),
       child: ListView(children: [
-        SizedBox(height: 40, child: Image.asset('assets/carrotRed.png')),
+        SizedBox(height: 40, child: Image.asset(AppImages.carrotRedImage)),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

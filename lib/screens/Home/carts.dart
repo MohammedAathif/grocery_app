@@ -1,12 +1,11 @@
 // ignore_for_file: avoid_print
 
 import 'package:flutter/material.dart';
-import 'package:grocery_app/screens/Database/database.dart';
-import 'package:grocery_app/screens/Database/datas.dart';
 import 'package:grocery_app/screens/orderAccept.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:grocery_app/utils/app_constants.dart';
+import 'package:grocery_app/utils/shared_preference.dart';
+import 'package:grocery_app/utils/widgets.dart';
 import '../../Model/model.dart';
-import '../../widgets/widgets.dart';
 
 class Carts extends StatefulWidget {
   const Carts({

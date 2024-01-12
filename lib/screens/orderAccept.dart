@@ -3,7 +3,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:grocery_app/screens/Home/HomePage.dart';
-import 'package:grocery_app/widgets/widgets.dart';
+import 'package:grocery_app/utils/app_images.dart';
+import 'package:grocery_app/utils/widgets.dart';
 
 class OrderAccepted extends StatefulWidget {
   const OrderAccepted({ Key? key }) : super(key: key);
@@ -24,7 +25,7 @@ class _OrderAcceptedState extends State<OrderAccepted> {
       body: Column(children: [
         Expanded(
           flex: 2,
-          child: Image.asset('assets/order_accepted.png',height: heigth * 1.0,width: width * 1.0,)),
+          child: Image.asset(AppImages.orderAcceptImage,height: heigth * 1.0,width: width * 1.0,)),
         Expanded(child: Column(
           children: [
             text(name:'Your Order has Been Accepted',fontSize: 30,fontweight: FontWeight.bold),
